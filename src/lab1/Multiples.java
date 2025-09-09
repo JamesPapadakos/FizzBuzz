@@ -2,18 +2,22 @@ package lab1;
 
 public class Multiples {
     public static void main(String[] args) {
-        int j = 0;
-        for (int i = 1; i < 1000; i++) {
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
+        //System.out.println(multiples());
+    }
 
-            if (divisibleBy3) {
+     static int multiples(int n, int a, int b) {
+        int j = 0;
+        for (int i = 1; i < n; i++) {
+            boolean divisibleBya = i % a == 0;
+            boolean divisibleByb = i % b == 0;
+
+            if (divisibleBya) {
                 j++;
             }
-            else if (divisibleBy5) {
+            else if (divisibleByb) {
                 j++;
             }
         }
-        System.out.println(j);
+        return j;
     }
 }
